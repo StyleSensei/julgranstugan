@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/julgranstugan/assets/red_spruce_icon-My3nolU8.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/lda2rmz.css" />
+    <title>Julgranstugan</title>
+    <script type="module" crossorigin src="/julgranstugan/assets/index-J922u1yi.js"></script>
+    <link rel="stylesheet" crossorigin href="/julgranstugan/assets/index-IRsu5rv6.css">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">Julgranstugan</h1>
+      <button class="c-button c-button--primary c-button--cta" id="cta">
+        Se våra granar
+      </button>
+    </header>
+
+    <main id="main" class="l-wrapper">
+      <button class="c-button c-button--secondary" id="main-cart-button">
+        <h1 class="bi bi-cart" id="cart-icon"></h1>
+      </button>
+      <ul class="l-list" id="product-list"></ul>
+
+      <!-- produktsida -->
+      <div class="l-wrapper" id="wrapper-product-page">
+        <section class="c-product-page">
+          <button
+            class="c-product-page__close-button c-button c-button--secondary"
+            id="product-page-close-button"
+          >
+            Stäng
+          </button>
+          <figure class="c-product-page__figure">
+            <img class="c-product-page__image" id="product-page-image" />
+          </figure>
+          <div class="c-product-page__header">
+            <h2 class="c-product-page__title" id="product-page-title">
+              Produkt
+            </h2>
+          </div>
+          <article class="product-page__article" id="product-page-article">
+            <p class="c-product-page__info" id="product-page-info">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              delectus saepe neque minus explicabo eius nihil, placeat, eos
+              quas, amet fuga dolores doloremque quisquam necessitatibus
+              dolorem. Eos minus accusantium consequuntur.
+            </p>
+          </article>
+          <button class="c-button c-button--tertiary" id="read-more">
+            Läs mer
+          </button>
+          <p class="c-product-page__size" id="product-page-size"></p>
+
+          <p class="c-product-page__price" id="product-page-price"></p>
+          <button
+            class="c-button c-button--primary"
+            id="product-page-cart-button"
+          >
+            Lägg i varukorg
+          </button>
+        </section>
+      </div>
+      <section class="c-checkout" id="checkout">
+        <h2 class="c-checkout__title" id="checkout-title">Kassa</h2>
+        <button class="c-button c-button--secondary" id="checkout-close-button">
+          stäng
+        </button>
+        <section class="cart--checkout" id="cart-checkout">
+          <h3 class="cart__heading">Varukorg</h3>
+          <p id="total-price-checkout"></p>
+          <ul id="checkout-cart-items" class="cart__items"></ul>
+        </section>
+
+        <form class="form-validation">
+          <div class="mb-2">
+            <label for="fullname" class="form-label">Namn</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fullname"
+              name="fullname"
+              required
+            />
+            <div class="invalid-feedback" id="fullname-feedBack">
+              Var god fyll i både för och efternamn.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="address" class="form-label">Adress</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              name="address"
+              required
+            />
+            <div class="invalid-feedback" id="adress-feedBack">
+              Var god fyll i din adress.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="zipcode" class="form-label">Postnummer</label>
+            <input
+              type="text"
+              class="form-control"
+              id="zipcode"
+              name="zipcode"
+              required
+            />
+            <div class="invalid-feedback" id="zipcode-feedBack">
+              Var god fyll i ditt postnummer.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="email" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+            <div class="invalid-feedback" id="email-feedBack">
+              Var god fyll i en giltig e-postadress.
+            </div>
+          </div>
+          <div class="mb-2">
+            <label for="cellPhone" class="form-label">Tel</label>
+            <input
+              type="tel"
+              pattern="[0-9]{10}"
+              class="form-control"
+              id="cellPhone"
+              name="cellPhone"
+              required
+            />
+            <div class="invalid-feedback" id="cellPhone-feedBack">
+              Var god fyll i ditt telefonnummer (10 siffror).
+            </div>
+          </div>
+          <div class="mb-2 col-md-12">
+            <button class="c-button c-button--primary" id="modalButton">
+              Genomför köp
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <aside>
+      <section class="cart" id="cart">
+        <div class="cart__header">
+          <h2 class="cart__title">Varukorg</h2>
+        </div>
+        <ul class="l-list-cart" id="cart-items"></ul>
+        <div class="cart__total-price"></div>
+        <div class="cart__button-wrapper">
+          <button class="cart__checkout-button c-button c-button--primary">Till kassan</button>
+          <button class="cart__close-button c-button c-button--secondary">Stäng</button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="modalContainer">
+      <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <section class="footer__content">
+        <div class="footer__info">
+          <div class="footer__contact">
+            <h3>Kontakt</h3>
+            <p>070 174 06 28</p>
+            <div class="footer__adress">
+              <h3>Adress</h3>
+              <p>Barrvägen 24</p>
+              <p>921 99, Granträsk</p>
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="footer__about">
+          <h2>Om oss</h2>
+          <p>
+            Välkommen till Julgranstugan, ditt ultimata mål för julgranar i alla
+            dess former! Vi tror på att varje gran förtjänar ett hem, oavsett om
+            den är liten och busig eller stor och ståtlig. Vår passion är att
+            matcha varje kund med den perfekta granen för deras unika behov och
+            smak.
+          </p>
+        </div>
+        <div class="footer__media">
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-facebook"></i>
+        </div>
+      </section>
+      <p class="footer__copyright">&copy; Grupp3 2024</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
