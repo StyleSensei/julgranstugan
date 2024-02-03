@@ -1,17 +1,21 @@
 {
-  "name": "webshop-template",
+  "name": "julgranstugan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "host": "vite --host"
   },
   "devDependencies": {
-    "sass": "^1.69.5",
+    "sass": "^1.70.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^5.0.12",
+    "vite-plugin-static-copy": "^1.0.1",
+    "gh-pages": "^6.1.1"
   }
 }
